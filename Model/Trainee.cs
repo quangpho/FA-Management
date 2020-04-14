@@ -37,7 +37,7 @@ namespace Model
         public virtual ICollection<RewardPenalty> RewardPenalties { get; set; }
 
         public virtual Status Status { get; set; }
-        public virtual Status StatusInClass { get; set; }
+        public virtual StatusInClass StatusInClass { get; set; }
         public virtual TraineeCandidateProfile TraineeCandidateProfile { get; set; }
 
         public virtual ClassBatch ClassBatch { get; set; }

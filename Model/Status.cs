@@ -16,7 +16,7 @@ namespace Model
 
         public int? BatchClassID { get; set; }
 
-        //public virtual ICollection<Trainee> Trainees { get; set; }
+        public virtual ICollection<Trainee> Trainees { get; set; }
 
     }
 }

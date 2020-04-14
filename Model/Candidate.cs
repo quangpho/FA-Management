@@ -1,5 +1,4 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,7 +13,6 @@ namespace Model
         [Key]
         public int Id { get; set; }
 
-        [CustomDateTimeValidation]
         public DateTime? ApplicationDate { get; set; }
         public int? LocationId { get; set; }
         public string Status { get; set; }

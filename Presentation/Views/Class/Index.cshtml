@@ -1,0 +1,177 @@
+﻿@model IEnumerable<Model.ClassBatch>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetailLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassAdminID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sub_SubjectTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DelivaryTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormatTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BudgetsID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScopeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanedTraineeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstimatedBudget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AcceptedTraineeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualTraineeNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Milestones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curriculum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.History)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpectedStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpectedEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetailLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassAdminID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sub_SubjectTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DelivaryTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormatTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BudgetsID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScopeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanedTraineeNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstimatedBudget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AcceptedTraineeNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualTraineeNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Milestones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Curriculum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.History)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClassID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClassID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClassID })
+        </td>
+    </tr>
+}
+
+</table>

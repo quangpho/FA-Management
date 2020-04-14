@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbContextInitializer.cs" />
     <Compile Include="FAMContext.cs" />
+    <Compile Include="Migrations\202004141410031_initial-db.cs" />
+    <Compile Include="Migrations\202004141410031_initial-db.designer.cs">
+      <DependentUpon>202004141410031_initial-db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +59,11 @@
       <Project>{898786ac-6cfb-4339-a428-94b66f7c881a}</Project>
       <Name>FAM.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004141410031_initial-db.resx">
+      <DependentUpon>202004141410031_initial-db.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

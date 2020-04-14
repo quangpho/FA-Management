@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common;
 
 
 namespace Model
@@ -19,18 +18,15 @@ namespace Model
         public string FullName { get; set; }
 
         [Required(ErrorMessage = "You must input all required fields")]
-        [CustomDateTimeValidation]
         public DateTime DOB { get; set; }
         [Required(ErrorMessage = "You must input all required fields")]
         public bool Gender { get; set; }
 
-        [CustomDateTimeValidation]
         public DateTime? GraduationDate { get; set; }
 
         
         [Index(IsUnique = true)]
         [Required(ErrorMessage = "You must input all required fields")]
-        [CustomPhoneValidation]
         [StringLength(14)]
         public string Phone { get; set; }
 
